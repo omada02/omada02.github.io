@@ -3,37 +3,119 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Omada — Portfolio</title>
+  <title>Matteo Adamo — Portfolio</title>
 
+  <!-- Google Font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
   <style>
-    body { font-family: 'Inter', sans-serif; margin:0; background:#fafafa; color:#222; }
-    header { text-align:center; padding:3rem 1.5rem; background:#fff; border-bottom:1px solid #e4e4e4; }
-    nav a { margin:0 1rem; text-decoration:none; color:#0077cc; font-weight:500; }
-    nav a:hover { text-decoration:underline; }
-    .container { max-width:900px; margin:2.4rem auto; padding:0 1.4rem; }
-    section { background:#fff; border:1px solid #ddd; border-radius:8px; padding:2rem; margin-bottom:2rem; }
-    section h2 { color:#0077cc; margin-top:0; }
-    .pub-item { margin-bottom:1.4rem; }
-    .pub-title { font-weight:600; color:#333; text-decoration:none; }
-    .pub-title:hover { text-decoration:underline; }
-    .meta { color:#777; font-size:0.9em; }
-    footer { text-align:center; padding:2rem 1rem; color:#666; }
-    .btn { background:#0077cc; color:white; padding:0.6rem 1.2rem; text-decoration:none; border-radius:6px; }
-    .btn:hover { background:#005fa3; }
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: #fafafa;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      padding: 3rem 1.5rem;
+      background: #ffffff;
+      border-bottom: 1px solid #e4e4e4;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 2.4rem;
+      font-weight: 600;
+    }
+
+    nav {
+      margin-top: 1rem;
+    }
+
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 2.4rem auto;
+      padding: 0 1.4rem;
+    }
+
+    section {
+      background: white;
+      margin-bottom: 2rem;
+      padding: 2rem;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+
+    section h2 {
+      margin-top: 0;
+      color: #0077cc;
+    }
+
+    .pub-item {
+      margin-bottom: 1.4rem;
+    }
+
+    .pub-title {
+      font-weight: 600;
+      color: #333;
+      text-decoration: none;
+    }
+
+    .pub-title:hover {
+      text-decoration: underline;
+    }
+
+    .meta {
+      font-size: 0.9em;
+      color: #777;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      color: #666;
+      font-size: 0.9em;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background: #0077cc;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: #005fa3;
+    }
   </style>
 </head>
 
 <body>
 
 <header>
-  <h1>Omada</h1>
-  <p>Developer | Tech Enthusiast</p>
+  <h1>Matteo Adamo</h1>
+  <p>Laureato in Informatica | Future Spacecraft Engineer</p>
+
   <nav>
+    <a href="#about">About</a>
     <a href="#publications">Publications</a>
     <a href="#projects">Projects</a>
-    <a href="#about">About</a>
     <a href="#cv">CV</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -41,50 +123,58 @@
 
 <div class="container">
 
-<section id="publications">
-  <h2>Publications</h2>
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Ciao! Sono <strong>Matteo Adamo</strong>, nato nel 2002 (22 anni), laureato nella
+      <strong>Laurea Triennale in Informatica all’Università di Verona</strong>.
+    </p>
+    <p>
+      Ho una forte passione per lo spazio, l’ingegneria e i sistemi complessi.  
+      Il mio obiettivo attuale è proseguire gli studi conseguendo il
+      <strong>Master in Spacecraft Design</strong>
+      presso la <strong>Luleå University of Technology</strong>, in Svezia.
+    </p>
+    <p>
+      Sono motivato, curioso e determinato ad applicare le mie competenze informatiche nel settore aerospaziale.
+    </p>
+  </section>
 
-  <div class="pub-item">
-    <a class="pub-title" href="#">Titolo della tua pubblicazione</a>
-    <div class="meta">2024 — Conference XYZ — Omada</div>
-  </div>
+  <!-- PUBLICATIONS (vuota per ora, la puoi riempire in futuro) -->
+  <section id="publications">
+    <h2>Publications</h2>
+    <p>Non ho ancora pubblicazioni formali, ma aggiornerò questa sezione in futuro.</p>
+  </section>
 
-  <div class="pub-item">
-    <a class="pub-title" href="#">Seconda pubblicazione</a>
-    <div class="meta">2023 — Journal ABC</div>
-  </div>
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li><a href="#">Progetto 1</a> — Descrizione breve del progetto.</li>
+      <li><a href="#">Progetto 2</a> — Descrizione breve del progetto.</li>
+      <li><a href="#">Progetto 3</a> — Descrizione breve del progetto.</li>
+    </ul>
+  </section>
 
-</section>
+  <!-- CV -->
+  <section id="cv">
+    <h2>Curriculum Vitae</h2>
+    <p>Scarica il mio CV:</p>
+    <a class="btn" href="cv.pdf" target="_blank">Download CV (PDF)</a>
+  </section>
 
-<section id="projects">
-  <h2>Projects</h2>
-  <ul>
-    <li><a href="#">Project 1</a> — Descrizione breve.</li>
-    <li><a href="#">Project 2</a> — Descrizione breve.</li>
-    <li><a href="#">Project 3</a> — Descrizione breve.</li>
-  </ul>
-</section>
-
-<section id="about">
-  <h2>About me</h2>
-  <p>Scrivi una breve descrizione su chi sei, cosa fai, quali sono le tue competenze.</p>
-</section>
-
-<section id="cv">
-  <h2>Curriculum Vitae</h2>
-  <a class="btn" href="cv.pdf" target="_blank">Download CV (PDF)</a>
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:tuo@email.com">tuo@email.com</a></p>
-  <p>GitHub: <a href="https://github.com/omada02">github.com/omada02</a></p>
-</section>
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:matteoadamo02@gmail.com">matteoadamo02@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/omada02">github.com/omada02</a></p>
+  </section>
 
 </div>
 
 <footer>
-  © 2025 Omada
+  © 2025 Matteo Adamo
 </footer>
 
 </body>

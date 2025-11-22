@@ -1,181 +1,91 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Matteo Adamo — Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matteo Adamo | Personal Website</title>
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            max-width: 900px;
+            margin: auto;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
 
-  <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      background: #fafafa;
-      color: #222;
-      line-height: 1.6;
-    }
+        h1, h2 {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
 
-    header {
-      text-align: center;
-      padding: 3rem 1.5rem;
-      background: #ffffff;
-      border-bottom: 1px solid #e4e4e4;
-    }
+        .section {
+            margin-top: 40px;
+        }
 
-    h1 {
-      margin: 0;
-      font-size: 2.4rem;
-      font-weight: 600;
-    }
+        a {
+            color: #1565c0;
+            text-decoration: none;
+        }
 
-    nav {
-      margin-top: 1rem;
-    }
+        a:hover {
+            text-decoration: underline;
+        }
 
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #0077cc;
-      font-weight: 500;
-    }
+        .cv-button {
+            display: inline-block;
+            padding: 10px 15px;
+            background: #1565c0;
+            color: white;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
 
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    .container {
-      max-width: 900px;
-      margin: 2.4rem auto;
-      padding: 0 1.4rem;
-    }
-
-    section {
-      background: white;
-      margin-bottom: 2rem;
-      padding: 2rem;
-      border-radius: 8px;
-      border: 1px solid #ddd;
-    }
-
-    section h2 {
-      margin-top: 0;
-      color: #0077cc;
-    }
-
-    .pub-item {
-      margin-bottom: 1.4rem;
-    }
-
-    .pub-title {
-      font-weight: 600;
-      color: #333;
-      text-decoration: none;
-    }
-
-    .pub-title:hover {
-      text-decoration: underline;
-    }
-
-    .meta {
-      font-size: 0.9em;
-      color: #777;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      color: #666;
-      font-size: 0.9em;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.6rem 1.2rem;
-      background: #0077cc;
-      color: white;
-      border-radius: 6px;
-      text-decoration: none;
-    }
-
-    .btn:hover {
-      background: #005fa3;
-    }
-  </style>
+        .cv-button:hover {
+            background: #0d47a1;
+        }
+    </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Matteo Adamo</h1>
-  <p>Laureato in Informatica | Future Spacecraft Engineer</p>
+    <h1>Matteo Adamo</h1>
+    <p><strong>Email:</strong> <a href="mailto:matteoadamo02@gmail.com">matteoadamo02@gmail.com</a></p>
+    <p><strong>Età:</strong> 22 anni (nato nel 2002)</p>
+    <p><strong>Formazione:</strong> Laurea Triennale in Informatica, Università di Verona</p>
+    <p><strong>Obiettivo:</strong> Master in Spacecraft Design presso Luleå University of Technology</p>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#publications">Publications</a>
-    <a href="#projects">Projects</a>
-    <a href="#cv">CV</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+    <a class="cv-button" href="cv.pdf">📄 Scarica il mio CV</a>
 
-<div class="container">
+    <div class="section">
+        <h2>Projects</h2>
+        <ul>
+            <li>
+                <strong>AI-Project</strong> — 
+                <a href="https://github.com/omada02/ai-project" target="_blank">
+                    https://github.com/omada02/ai-project
+                </a>
+            </li>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      Ciao! Sono <strong>Matteo Adamo</strong>, nato nel 2002 (22 anni), laureato nella
-      <strong>Laurea Triennale in Informatica all’Università di Verona</strong>.
-    </p>
-    <p>
-      Ho una forte passione per lo spazio, l’ingegneria e i sistemi complessi.  
-      Il mio obiettivo attuale è proseguire gli studi conseguendo il
-      <strong>Master in Spacecraft Design</strong>
-      presso la <strong>Luleå University of Technology</strong>, in Svezia.
-    </p>
-    <p>
-      Sono motivato, curioso e determinato ad applicare le mie competenze informatiche nel settore aerospaziale.
-    </p>
-  </section>
+            <li>
+                <strong>Progetto Sito Web Biblioteca</strong> — 
+                <a href="https://github.com/omada02/biblioteca" target="_blank">
+                    https://github.com/omada02/biblioteca
+                </a>
+            </li>
+        </ul>
+    </div>
 
-  <!-- PUBLICATIONS (vuota per ora, la puoi riempire in futuro) -->
-  <section id="publications">
-    <h2>Publications</h2>
-    <p>Non ho ancora pubblicazioni formali, ma aggiornerò questa sezione in futuro.</p>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <ul>
-      <li><a href="#">Progetto 1</a> — Descrizione breve del progetto.</li>
-      <li><a href="#">Progetto 2</a> — Descrizione breve del progetto.</li>
-      <li><a href="#">Progetto 3</a> — Descrizione breve del progetto.</li>
-    </ul>
-  </section>
-
-  <!-- CV -->
-  <section id="cv">
-    <h2>Curriculum Vitae</h2>
-    <p>Scarica il mio CV:</p>
-    <a class="btn" href="cv.pdf" target="_blank">Download CV (PDF)</a>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:matteoadamo02@gmail.com">matteoadamo02@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/omada02">github.com/omada02</a></p>
-  </section>
-
-</div>
-
-<footer>
-  © 2025 Matteo Adamo
-</footer>
+    <div class="section">
+        <h2>About Me</h2>
+        <p>
+            Sono Matteo, un giovane informatico appassionato di tecnologia, IA e ingegneria spaziale.
+            Dopo la laurea triennale all’Università di Verona, sto perseguendo il mio sogno di entrare
+            nel Master in Spacecraft Design alla Luleå University of Technology.  
+            Mi piace lavorare su progetti concreti, imparare nuove tecnologie e migliorarmi continuamente.
+        </p>
+    </div>
 
 </body>
 </html>

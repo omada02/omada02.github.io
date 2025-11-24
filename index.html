@@ -6,104 +6,128 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Matteo Adamo | Portfolio</title>
 
-<!-- Google Font -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-  /* GLOBAL */
+  /* GLOBAL STYLES */
+  * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
     font-family: 'Inter', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: #f4f4f9;
-    color: #222;
+    background: #f8f9fc;
+    color: #333;
     scroll-behavior: smooth;
   }
-
   a { text-decoration: none; color: inherit; }
 
-  /* NAVBAR */
+  /* HEADER */
   header {
     position: sticky;
     top: 0;
     background: #fff;
-    border-bottom: 1px solid #ddd;
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
     z-index: 1000;
   }
-
-  header h1 { margin: 0; font-size: 1.6rem; }
-
+  header h1 { font-weight: 700; font-size: 1.8rem; color: #0077cc; }
   nav a {
-    margin-left: 1rem;
+    margin-left: 1.5rem;
     font-weight: 500;
     color: #0077cc;
+    transition: color 0.2s;
   }
-
-  nav a:hover { text-decoration: underline; }
+  nav a:hover { color: #005fa3; }
 
   /* CONTAINER */
-  .container { max-width: 1000px; margin: 2rem auto; padding: 0 1.5rem; }
+  .container { max-width: 1100px; margin: 2rem auto; padding: 0 1.5rem; }
 
-  /* SECTIONS */
+  /* SECTION STYLES */
   section {
     background: #fff;
-    padding: 2rem;
+    padding: 3rem 2rem;
     margin-bottom: 2rem;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
   }
+  section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  }
+  h2 { color: #0077cc; margin-bottom: 1.5rem; font-weight: 700; font-size: 2rem; }
 
-  h2 { color: #0077cc; margin-top: 0; }
+  /* ABOUT SECTION */
+  .about p { margin-bottom: 1rem; line-height: 1.6; }
 
-  /* CARDS PROGETTI */
+  /* PROJECTS GRID */
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
   }
-
   .project-card {
-    padding: 1rem;
-    border-radius: 8px;
+    background: #f1f5f9;
+    padding: 1.5rem;
+    border-radius: 12px;
     border: 1px solid #ddd;
-    background: #fafafa;
-    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s, box-shadow 0.3s;
   }
-
   .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
   }
-
-  .project-card a {
+  .project-card h3 {
+    font-size: 1.3rem;
     color: #0077cc;
-    font-weight: 600;
+    margin-bottom: 0.5rem;
   }
+  .project-card p { flex: 1; margin-bottom: 1rem; }
+  .project-links {
+    display: flex;
+    gap: 1rem;
+  }
+  .project-links a {
+    flex: 1;
+    text-align: center;
+    padding: 0.5rem 0;
+    border-radius: 6px;
+    font-weight: 600;
+    color: #fff;
+    transition: background 0.2s;
+  }
+  .github-link { background: #333; }
+  .github-link:hover { background: #000; }
+  .pdf-link { background: #0077cc; }
+  .pdf-link:hover { background: #005fa3; }
 
   /* CV BUTTON */
   .cv-button {
     display: inline-block;
-    padding: 0.6rem 1.2rem;
+    padding: 0.7rem 1.5rem;
     background: #0077cc;
     color: white;
-    border-radius: 6px;
+    font-weight: 600;
+    border-radius: 8px;
     margin-top: 1rem;
+    transition: background 0.3s;
   }
-
   .cv-button:hover { background: #005fa3; }
 
-  /* ABOUT */
-  .about p { margin-bottom: 1rem; }
+  /* CONTACT */
+  .contact p { margin-bottom: 0.8rem; font-weight: 500; }
 
   /* FOOTER */
   footer {
     text-align: center;
     padding: 1.5rem;
-    color: #666;
+    color: #777;
+    font-size: 0.9rem;
   }
 
   /* RESPONSIVE */
@@ -132,7 +156,7 @@
   <section id="about" class="about">
     <h2>About Me</h2>
     <p>Sono Matteo, un giovane informatico appassionato di tecnologia, IA e ingegneria spaziale.</p>
-    <p>Dopo la laurea triennale in Informatica all’Università di Verona, sto perseguendo il mio sogno di entrare nel Master in Spacecraft Design alla Luleå University of Technology.</p>
+    <p>Dopo la laurea triennale in Informatica all’Università di Verona, sto perseguendo il Master in Spacecraft Design alla Luleå University of Technology.</p>
     <p>Mi piace lavorare su progetti concreti, imparare nuove tecnologie e migliorarmi continuamente.</p>
   </section>
 
@@ -141,12 +165,20 @@
     <h2>Projects</h2>
     <div class="projects-grid">
       <div class="project-card">
-        <a href="https://github.com/omada02/ai-project" target="_blank">AI-Project</a>
+        <h3>AI-Project</h3>
         <p>Progetto di intelligenza artificiale con implementazioni avanzate di algoritmi.</p>
+        <div class="project-links">
+          <a href="https://github.com/omada02/ai-project" target="_blank" class="github-link">GitHub</a>
+          <a href="ai-project.pdf" target="_blank" class="pdf-link">📄 PDF</a>
+        </div>
       </div>
       <div class="project-card">
-        <a href="https://github.com/omada02/biblioteca" target="_blank">Progetto Sito Web Biblioteca</a>
+        <h3>Progetto Sito Web Biblioteca</h3>
         <p>Sito web completo per la gestione di una biblioteca, con frontend e backend.</p>
+        <div class="project-links">
+          <a href="https://github.com/omada02/biblioteca" target="_blank" class="github-link">GitHub</a>
+          <a href="biblioteca.pdf" target="_blank" class="pdf-link">📄 PDF</a>
+        </div>
       </div>
     </div>
   </section>
@@ -158,7 +190,7 @@
   </section>
 
   <!-- CONTACT -->
-  <section id="contact">
+  <section id="contact" class="contact">
     <h2>Contact</h2>
     <p>Email: <a href="mailto:matteoadamo02@gmail.com">matteoadamo02@gmail.com</a></p>
     <p>GitHub: <a href="https://github.com/omada02">github.com/omada02</a></p>

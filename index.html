@@ -7,134 +7,74 @@
 <title>Matteo Adamo | Portfolio</title>
 
 <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-  /* GLOBAL STYLES */
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: 'Inter', sans-serif;
-    background: #f8f9fc;
-    color: #333;
-    scroll-behavior: smooth;
-  }
-  a { text-decoration: none; color: inherit; }
+/* GLOBAL */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Inter', sans-serif; background:#f8f9fc; color:#333; scroll-behavior: smooth; }
+a { text-decoration:none; color:inherit; }
 
-  /* HEADER */
-  header {
-    position: sticky;
-    top: 0;
-    background: #fff;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-    z-index: 1000;
-  }
-  header h1 { font-weight: 700; font-size: 1.8rem; color: #0077cc; }
-  nav a {
-    margin-left: 1.5rem;
-    font-weight: 500;
-    color: #0077cc;
-    transition: color 0.2s;
-  }
-  nav a:hover { color: #005fa3; }
+/* HEADER */
+header {
+  position: sticky; top:0; background:#fff; padding:1rem 2rem;
+  display:flex; justify-content:space-between; align-items:center; box-shadow:0 2px 6px rgba(0,0,0,0.1); z-index:1000;
+}
+header h1 { font-weight:700; font-size:1.8rem; color:#0077cc; }
+nav a { margin-left:1.5rem; font-weight:500; color:#0077cc; transition:color 0.2s; }
+nav a:hover { color:#005fa3; }
 
-  /* CONTAINER */
-  .container { max-width: 1100px; margin: 2rem auto; padding: 0 1.5rem; }
+/* HERO */
+#hero {
+  text-align:center; padding:5rem 2rem;
+  background: linear-gradient(135deg,#0077cc,#00aaff); color:white;
+}
+#hero img {
+  width:180px; height:180px; border-radius:50%; border:4px solid white; object-fit:cover; margin-bottom:1.5rem;
+}
+#hero h1 { font-size:2.5rem; margin-bottom:0.5rem; }
+#hero p { font-size:1.2rem; max-width:600px; margin:0 auto 1.5rem; line-height:1.6; }
+#hero a { padding:0.8rem 2rem; background:white; color:#0077cc; border-radius:8px; font-weight:600; transition:0.3s; }
+#hero a:hover { background:#e6e6e6; }
 
-  /* SECTION STYLES */
-  section {
-    background: #fff;
-    padding: 3rem 2rem;
-    margin-bottom: 2rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  section:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-  }
-  h2 { color: #0077cc; margin-bottom: 1.5rem; font-weight: 700; font-size: 2rem; }
+/* CONTAINER SECTIONS */
+.container { max-width:1100px; margin:2rem auto; padding:0 1.5rem; }
+section { background:#fff; padding:3rem 2rem; margin-bottom:2rem; border-radius:15px; box-shadow:0 4px 20px rgba(0,0,0,0.05); transition:transform 0.3s, box-shadow 0.3s; }
+section:hover { transform:translateY(-5px); box-shadow:0 8px 25px rgba(0,0,0,0.08); }
+h2 { color:#0077cc; margin-bottom:1.5rem; font-weight:700; font-size:2rem; }
 
-  /* ABOUT SECTION */
-  .about p { margin-bottom: 1rem; line-height: 1.6; }
+/* ABOUT */
+.about p { margin-bottom:1rem; line-height:1.6; }
 
-  /* PROJECTS GRID */
-  .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-  }
-  .project-card {
-    background: #f1f5f9;
-    padding: 1.5rem;
-    border-radius: 12px;
-    border: 1px solid #ddd;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: transform 0.3s, box-shadow 0.3s;
-  }
-  .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-  }
-  .project-card h3 {
-    font-size: 1.3rem;
-    color: #0077cc;
-    margin-bottom: 0.5rem;
-  }
-  .project-card p { flex: 1; margin-bottom: 1rem; }
-  .project-links {
-    display: flex;
-    gap: 1rem;
-  }
-  .project-links a {
-    flex: 1;
-    text-align: center;
-    padding: 0.5rem 0;
-    border-radius: 6px;
-    font-weight: 600;
-    color: #fff;
-    transition: background 0.2s;
-  }
-  .github-link { background: #333; }
-  .github-link:hover { background: #000; }
-  .pdf-link { background: #0077cc; }
-  .pdf-link:hover { background: #005fa3; }
+/* SKILLS */
+.skills-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(120px,1fr)); gap:1.5rem; text-align:center; }
+.skill { background:#f1f5f9; padding:1rem; border-radius:12px; font-weight:600; }
 
-  /* CV BUTTON */
-  .cv-button {
-    display: inline-block;
-    padding: 0.7rem 1.5rem;
-    background: #0077cc;
-    color: white;
-    font-weight: 600;
-    border-radius: 8px;
-    margin-top: 1rem;
-    transition: background 0.3s;
-  }
-  .cv-button:hover { background: #005fa3; }
+/* PROJECTS GRID */
+.projects-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:2rem; }
+.project-card { background:#f1f5f9; padding:1.5rem; border-radius:12px; border:1px solid #ddd; display:flex; flex-direction:column; justify-content:space-between; transition:transform 0.3s, box-shadow 0.3s; }
+.project-card:hover { transform:translateY(-5px); box-shadow:0 8px 20px rgba(0,0,0,0.1); }
+.project-card h3 { font-size:1.3rem; color:#0077cc; margin-bottom:0.5rem; }
+.project-card p { flex:1; margin-bottom:1rem; }
+.project-links { display:flex; gap:1rem; }
+.project-links a { flex:1; text-align:center; padding:0.5rem 0; border-radius:6px; font-weight:600; color:#fff; transition:background 0.2s; }
+.github-link { background:#333; }
+.github-link:hover { background:#000; }
+.pdf-link { background:#0077cc; }
+.pdf-link:hover { background:#005fa3; }
 
-  /* CONTACT */
-  .contact p { margin-bottom: 0.8rem; font-weight: 500; }
+/* CV BUTTON */
+.cv-button { display:inline-block; padding:0.7rem 1.5rem; background:#0077cc; color:white; font-weight:600; border-radius:8px; margin-top:1rem; transition:background 0.3s; }
+.cv-button:hover { background:#005fa3; }
 
-  /* FOOTER */
-  footer {
-    text-align: center;
-    padding: 1.5rem;
-    color: #777;
-    font-size: 0.9rem;
-  }
+/* CONTACT */
+.contact p { margin-bottom:0.8rem; font-weight:500; }
 
-  /* RESPONSIVE */
-  @media (max-width: 600px) {
-    header { flex-direction: column; align-items: flex-start; }
-    nav { margin-top: 0.5rem; }
-  }
+/* FOOTER */
+footer { text-align:center; padding:1.5rem; color:#777; font-size:0.9rem; }
+
+/* RESPONSIVE */
+@media (max-width:600px){ header{flex-direction:column;align-items:flex-start} nav{margin-top:0.5rem} }
 </style>
 </head>
 
@@ -143,12 +83,22 @@
 <header>
   <h1>Matteo Adamo</h1>
   <nav>
+    <a href="#hero">Home</a>
     <a href="#about">About</a>
+    <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
     <a href="#cv">CV</a>
     <a href="#contact">Contact</a>
   </nav>
 </header>
+
+<!-- HERO -->
+<section id="hero">
+  <img src="foto.jpg" alt="Matteo Adamo">
+  <h1>Matteo Adamo</h1>
+  <p>Informatico e appassionato di tecnologia, intelligenza artificiale e ingegneria spaziale.</p>
+  <a href="cv.pdf" target="_blank">📄 Scarica CV</a>
+</section>
 
 <div class="container">
 
@@ -158,6 +108,19 @@
     <p>Sono Matteo, un giovane informatico appassionato di tecnologia, IA e ingegneria spaziale.</p>
     <p>Dopo la laurea triennale in Informatica all’Università di Verona, sto perseguendo il Master in Spacecraft Design alla Luleå University of Technology.</p>
     <p>Mi piace lavorare su progetti concreti, imparare nuove tecnologie e migliorarmi continuamente.</p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill">Python</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">HTML & CSS</div>
+      <div class="skill">IA / Machine Learning</div>
+      <div class="skill">MATLAB</div>
+      <div class="skill">Spacecraft Design</div>
+    </div>
   </section>
 
   <!-- PROJECTS -->
@@ -194,6 +157,7 @@
     <h2>Contact</h2>
     <p>Email: <a href="mailto:matteoadamo02@gmail.com">matteoadamo02@gmail.com</a></p>
     <p>GitHub: <a href="https://github.com/omada02">github.com/omada02</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/matteo-adamo/">linkedin.com/in/matteo-adamo</a></p>
   </section>
 
 </div>

@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Matteo Adamo | Portfolio Professionale</title>
+<title>Matteo Adamo | Professional Portfolio</title>
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -117,6 +117,27 @@ nav a:hover {
 
 nav a:hover:after {
   width: 100%;
+}
+
+/* Language Toggle Button */
+.language-toggle {
+  background: var(--primary);
+  color: var(--white);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  font-weight: 600;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 1rem;
+}
+
+.language-toggle:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
 }
 
 /* HERO */
@@ -569,6 +590,11 @@ footer {
     gap: 1rem;
   }
   
+  .language-toggle {
+    align-self: flex-end;
+    margin-top: -3.5rem;
+  }
+  
   #hero h1 {
     font-size: 2.5rem;
   }
@@ -607,6 +633,11 @@ footer {
   .project-links {
     flex-direction: column;
   }
+  
+  .language-toggle {
+    margin-top: 0;
+    align-self: center;
+  }
 }
 </style>
 </head>
@@ -616,13 +647,16 @@ footer {
 <header id="main-header">
   <h1><i class="fas fa-code"></i> Matteo Adamo</h1>
   <nav>
-    <a href="#hero">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#cv">CV</a>
-    <a href="#contact">Contact</a>
+    <a href="#hero" data-i18n="nav-home">Home</a>
+    <a href="#about" data-i18n="nav-about">About</a>
+    <a href="#skills" data-i18n="nav-skills">Skills</a>
+    <a href="#projects" data-i18n="nav-projects">Projects</a>
+    <a href="#cv" data-i18n="nav-cv">CV</a>
+    <a href="#contact" data-i18n="nav-contact">Contact</a>
   </nav>
+  <button id="language-toggle" class="language-toggle">
+    <i class="fas fa-globe"></i> <span data-i18n="language">EN</span>
+  </button>
 </header>
 
 <!-- HERO -->
@@ -630,10 +664,10 @@ footer {
   <div class="hero-content">
     <img src="foto.jpg" alt="Matteo Adamo" class="hero-image">
     <h1>Matteo Adamo</h1>
-    <p class="subtitle">Informatico e appassionato di tecnologia e ingegneria spaziale.</p>
+    <p class="subtitle" data-i18n="hero-subtitle">Computer Scientist and passionate about technology and space engineering.</p>
     <div class="hero-buttons">
-      <a href="cv.pdf" target="_blank" class="hero-btn primary"><i class="fas fa-download"></i> Scarica CV</a>
-      <a href="#projects" class="hero-btn"><i class="fas fa-project-diagram"></i> Vedi Progetti</a>
+      <a href="cv.pdf" target="_blank" class="hero-btn primary"><i class="fas fa-download"></i> <span data-i18n="hero-cv-button">Download CV</span></a>
+      <a href="#projects" class="hero-btn"><i class="fas fa-project-diagram"></i> <span data-i18n="hero-projects-button">View Projects</span></a>
     </div>
   </div>
   <div class="scroll-indicator">
@@ -651,10 +685,10 @@ footer {
     <div class="about-text">
       <div class="section-header">
         <i class="fas fa-user"></i>
-        <h2>About Me</h2>
+        <h2 data-i18n="about-title">About Me</h2>
       </div>
-      <p>Sono Matteo, un giovane informatico appassionato di tecnologia e ingegneria spaziale. Amo lavorare su progetti concreti, imparare nuove tecnologie e affrontare sfide complesse.</p>
-      <p>Dopo la laurea triennale in Informatica all’Università di Verona, sto pensando di proseguire con il Master in Spacecraft Design alla Luleå University of Technology.</p>
+      <p data-i18n="about-p1">I am Matteo, a young computer scientist passionate about technology and space engineering. I love working on concrete projects, learning new technologies and tackling complex challenges.</p>
+      <p data-i18n="about-p2">After my bachelor's degree in Computer Science at the University of Verona, I am considering pursuing a Master's in Spacecraft Design at Luleå University of Technology.</p>
     </div>
   </section>
 
@@ -662,7 +696,7 @@ footer {
   <section id="skills">
     <div class="section-header">
       <i class="fas fa-cogs"></i>
-      <h2>Skills</h2>
+      <h2 data-i18n="skills-title">Skills</h2>
     </div>
     <div class="skills-grid">
       <div class="skill">
@@ -680,6 +714,7 @@ footer {
       <div class="skill">
         <i class="fas fa-cube"></i>
         <span>C, C++</span>
+      </div>
     </div>
   </section>
 
@@ -687,12 +722,12 @@ footer {
   <section id="projects">
     <div class="section-header">
       <i class="fas fa-project-diagram"></i>
-      <h2>Projects</h2>
+      <h2 data-i18n="projects-title">Projects</h2>
     </div>
     <div class="projects-grid">
       <div class="project-card">
-        <h3><i class="fas fa-robot"></i> AI-Project</h3>
-        <p>Progetto di intelligenza artificiale con implementazioni avanzate di algoritmi di machine learning e deep learning per risolvere problemi complessi.</p>
+        <h3><i class="fas fa-robot"></i> <span data-i18n="project1-title">AI Project</span></h3>
+        <p data-i18n="project1-desc">Artificial intelligence project with advanced implementations of machine learning and deep learning algorithms to solve complex problems.</p>
         <div class="project-links">
           <a href="https://github.com/omada02/ai-project" target="_blank" class="github-link">
             <i class="fab fa-github"></i> GitHub
@@ -703,8 +738,8 @@ footer {
         </div>
       </div>
       <div class="project-card">
-        <h3><i class="fas fa-book"></i> Progetto Sito Web Biblioteca</h3>
-        <p>Sito web completo per la gestione di una biblioteca, con frontend responsive e backend robusto per la gestione del catalogo e prestiti.</p>
+        <h3><i class="fas fa-book"></i> <span data-i18n="project2-title">Library Website Project</span></h3>
+        <p data-i18n="project2-desc">Complete website for library management, with responsive frontend and robust backend for catalog and loan management.</p>
         <div class="project-links">
           <a href="https://github.com/omada02/biblioteca" target="_blank" class="github-link">
             <i class="fab fa-github"></i> GitHub
@@ -721,11 +756,11 @@ footer {
   <section id="cv" class="cv-section">
     <div class="section-header">
       <i class="fas fa-file-alt"></i>
-      <h2>Curriculum Vitae</h2>
+      <h2 data-i18n="cv-title">Curriculum Vitae</h2>
     </div>
-    <p>Scarica il mio CV completo per conoscere la mia esperienza, formazione e competenze in dettaglio.</p>
+    <p data-i18n="cv-text">Download my complete CV to know my experience, education and skills in detail.</p>
     <a class="cv-button" href="cv.pdf" target="_blank">
-      <i class="fas fa-download"></i> Download CV
+      <i class="fas fa-download"></i> <span data-i18n="cv-button">Download CV</span>
     </a>
   </section>
 
@@ -733,7 +768,7 @@ footer {
   <section id="contact" class="contact">
     <div class="section-header">
       <i class="fas fa-envelope"></i>
-      <h2>Contact</h2>
+      <h2 data-i18n="contact-title">Contact</h2>
     </div>
     <p><i class="fas fa-envelope"></i> Email: <a href="mailto:matteoadamo02@gmail.com">matteoadamo02@gmail.com</a></p>
     <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/omada02">github.com/omada02</a></p>
@@ -742,11 +777,131 @@ footer {
 
 </div>
 
-<footer>
-  © 2025 Matteo Adamo. Tutti i diritti riservati.
+<footer data-i18n="footer">
+  © 2025 Matteo Adamo. All rights reserved.
 </footer>
 
 <script>
+// Language translations
+const translations = {
+  it: {
+    // Navigation
+    "nav-home": "Home",
+    "nav-about": "About",
+    "nav-skills": "Skills",
+    "nav-projects": "Progetti",
+    "nav-cv": "CV",
+    "nav-contact": "Contatti",
+    "language": "IT",
+    
+    // Hero
+    "hero-subtitle": "Informatico e appassionato di tecnologia e ingegneria spaziale.",
+    "hero-cv-button": "Scarica CV",
+    "hero-projects-button": "Vedi Progetti",
+    
+    // About
+    "about-title": "About Me",
+    "about-p1": "Sono Matteo, un giovane informatico appassionato di tecnologia e ingegneria spaziale. Amo lavorare su progetti concreti, imparare nuove tecnologie e affrontare sfide complesse.",
+    "about-p2": "Dopo la laurea triennale in Informatica all'Università di Verona, sto pensando di proseguire con il Master in Spacecraft Design alla Luleå University of Technology.",
+    
+    // Skills
+    "skills-title": "Skills",
+    
+    // Projects
+    "projects-title": "Progetti",
+    "project1-title": "AI-Project",
+    "project1-desc": "Progetto di intelligenza artificiale con implementazioni avanzate di algoritmi di machine learning e deep learning per risolvere problemi complessi.",
+    "project2-title": "Progetto Sito Web Biblioteca",
+    "project2-desc": "Sito web completo per la gestione di una biblioteca, con frontend responsive e backend robusto per la gestione del catalogo e prestiti.",
+    
+    // CV
+    "cv-title": "Curriculum Vitae",
+    "cv-text": "Scarica il mio CV completo per conoscere la mia esperienza, formazione e competenze in dettaglio.",
+    "cv-button": "Download CV",
+    
+    // Contact
+    "contact-title": "Contatti",
+    
+    // Footer
+    "footer": "© 2025 Matteo Adamo. Tutti i diritti riservati."
+  },
+  en: {
+    // Navigation
+    "nav-home": "Home",
+    "nav-about": "About",
+    "nav-skills": "Skills",
+    "nav-projects": "Projects",
+    "nav-cv": "CV",
+    "nav-contact": "Contact",
+    "language": "EN",
+    
+    // Hero
+    "hero-subtitle": "Computer Scientist and passionate about technology and space engineering.",
+    "hero-cv-button": "Download CV",
+    "hero-projects-button": "View Projects",
+    
+    // About
+    "about-title": "About Me",
+    "about-p1": "I am Matteo, a young computer scientist passionate about technology and space engineering. I love working on concrete projects, learning new technologies and tackling complex challenges.",
+    "about-p2": "After my bachelor's degree in Computer Science at the University of Verona, I am considering pursuing a Master's in Spacecraft Design at Luleå University of Technology.",
+    
+    // Skills
+    "skills-title": "Skills",
+    
+    // Projects
+    "projects-title": "Projects",
+    "project1-title": "AI Project",
+    "project1-desc": "Artificial intelligence project with advanced implementations of machine learning and deep learning algorithms to solve complex problems.",
+    "project2-title": "Library Website Project",
+    "project2-desc": "Complete website for library management, with responsive frontend and robust backend for catalog and loan management.",
+    
+    // CV
+    "cv-title": "Curriculum Vitae",
+    "cv-text": "Download my complete CV to know my experience, education and skills in detail.",
+    "cv-button": "Download CV",
+    
+    // Contact
+    "contact-title": "Contact",
+    
+    // Footer
+    "footer": "© 2025 Matteo Adamo. All rights reserved."
+  }
+};
+
+// Current language
+let currentLang = 'en';
+
+// Function to change language
+function changeLanguage(lang) {
+  currentLang = lang;
+  document.documentElement.lang = lang;
+  
+  // Update all elements with data-i18n attribute
+  document.querySelectorAll('[data-i18n]').forEach(element => {
+    const key = element.getAttribute('data-i18n');
+    if (translations[lang][key]) {
+      element.textContent = translations[lang][key];
+    }
+  });
+  
+  // Update language button text
+  document.querySelector('#language-toggle span').textContent = lang === 'it' ? 'EN' : 'IT';
+}
+
+// Toggle language function
+function toggleLanguage() {
+  const newLang = currentLang === 'en' ? 'it' : 'en';
+  changeLanguage(newLang);
+}
+
+// Initialize with English
+document.addEventListener('DOMContentLoaded', () => {
+  changeLanguage('en');
+  
+  // Add event listener to language toggle button
+  document.getElementById('language-toggle').addEventListener('click', toggleLanguage);
+});
+
 // Header scroll effect
 window.addEventListener('scroll', function() {
   const header = document.getElementById('main-header');
